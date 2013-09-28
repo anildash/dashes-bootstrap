@@ -43,35 +43,35 @@
     <style>
     
         body, h1, h2, h3, h4, .illust p, .navbar {
-            font-family : 'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-family: 'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
         }
 
         a, h2 a, h3 a, a:hover {
             color :#800080;
-            font-weight : 300;
+            font-weight: 300;
         }
 
         h1, h2, h3, .thinkup_post {
-            font-size : 1.2em;
-            text-transform : uppercase;
+            font-size: 1.2em;
+            text-transform: uppercase;
         }
         h1 {
-            font-weight : 300;
-            font-size : 150%;
+            font-weight: 300;
+            font-size: 150%;
             color: #333;
         }
         h2 {
-            font-weight : 300;
-            font-size : 1em;
+            font-weight: 300;
+            font-size: 1em;
         }
 
         h3, .illust p {
-            font-weight : 100;
+            font-weight: 100;
             font-sie: 120%;
             letter-spacing: +0.1em;
             text-transform: uppercase;
-            color :#999;
-            border-bottom : 1px solid #eee;
+            color: #999;
+            border-bottom: 1px solid #eee;
         }
         .navbar {
             background: transparent;
@@ -88,6 +88,9 @@
             color :#800080;
             font-weight: 900;
             text-transform: uppercase;
+        }
+        .navbar-default .navbar-brand:hover {
+            color: white;
         }
         .navbar-text, .navbar-nav>li {
             padding-left: 4px;
@@ -120,7 +123,7 @@
         }
         blockquote p {
             line-height: 2.5;
-            font-family : 'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-family: 'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
         }
         .bloglist ui {
             padding-left: 0px;
@@ -135,16 +138,21 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            padding : 15px;
-            text-align : center;
+            padding: 15px;
+            text-align: center;
         }
         .imgleft{
-            float : left;
-            padding : 15px;
+            float: left;
+            margin: 15px;
         }
         .imgright, .illust {
-            float : right;
-            padding : 15px;
+            float: right;
+            margin: 15px;
+        }
+        @media (max-width: 1199px) {
+            .navbar-nav>li>a {
+                padding-right: 0px;
+            }
         }
         @media (max-width: 767px) {
             img, object, embed, .imgcenter, .imgright, .imgleft, iframe {
@@ -157,12 +165,18 @@
             h2.navbar-text {
                 clear: left;
             }
+            h3, .illust p {
+                border-bottom: none;
+            }
             ul.navbar-nav {
                 width: 100%;
             }
             .navbar-nav>li>a {
                 padding-top: 4px;
                 padding-bottom: 4px;
+            }
+            .navbar>.container .navbar-brand {
+                margin-left: -15px;
             }
         }
     </style>
@@ -192,7 +206,7 @@
         </button>
         <a class="navbar-brand" href="http://dashes.com/anil/">Anil Dash</a>
         <div class="nav-collapse">
-          <h2 class="navbar-text">A blog about making culture</h2>
+          <h2 class="navbar-text pull-left">A blog about making culture</h2>
           <ul class="nav navbar-nav pull-right">
             <li><a href="/anil/about.html">About</a></li>
             <li><a href="/anil/best-of/">Best Of</a></li>
@@ -293,8 +307,8 @@
         <div class="row">
             <div class="col-md-4">
 
-                <div class="share-buttons" style="clear : left;">
-                    <div class="fb-like" data-href="http://dashes.com/anil/2013/08/on-location-with-foursquare.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" style="padding-top : -8px;"></div>
+                <div class="share-buttons" style="clear: left;">
+                    <div class="fb-like" data-href="http://dashes.com/anil/2013/08/on-location-with-foursquare.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" style="padding-top: -8px;"></div>
                     <a data-pin-config="beside" href="//pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" style="" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://dashes.com/anil/2013/08/on-location-with-foursquare.html" data-via="anildash" data-related="anildash">Tweet</a>
                 </div>
@@ -641,7 +655,7 @@
 
     <script type="text/javascript">
         var cbjspath = "static.chartbeat.com/js/chartbeat.js?uid=2383&domain=dashes.com";
-        var cbjsprotocol = (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://");
+        var cbjsprotocol = (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/": "http://");
         document.write(unescape("%3Cscript src='"+cbjsprotocol+cbjspath+"' type='text/javascript'%3E%3C/script%3E"))
     </script>
 
