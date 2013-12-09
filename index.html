@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" href="anil/images/apple-touch-icon-57-precomposed.png">
 
     <!-- Bootstrap core -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
     <script type="text/javascript">
@@ -149,6 +149,9 @@
             float: right;
             margin: 15px;
         }
+        .fb-comments, .fb-comments iframe[style] {
+            width: 100% !important;
+        }
         @media (max-width: 1199px) {
             .navbar-nav>li>a {
                 padding-right: 0px;
@@ -199,13 +202,13 @@
     <nav>
     <div class="navbar navbar-static-top navbar-default">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="http://dashes.com/anil/">Anil Dash</a>
-        <div class="nav-collapse">
+        <div class="collapse navbar-collapse">
           <h2 class="navbar-text pull-left">A blog about making culture</h2>
           <ul class="nav navbar-nav pull-right">
             <li><a href="/anil/about.html">About</a></li>
@@ -213,7 +216,7 @@
             <li><a href="/anil/most-popular/">Most Popular</a></li>
             <li><a href="#more">More &raquo;</a></li>
           </ul>
-            <form method="get" action="http://dashes.com/mt/mt-search.cgi" class="navbar-form pull-right" role="search">
+            <form method="get" action="http://dashes.com/mt/mt-search.cgi" class="navbar-form " role="search">
 
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search" id="search" class="ti" name="search" value="">
@@ -222,7 +225,7 @@
                 </div>
                 <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
             </form>
-        </div><!--/.nav-collapse -->
+        </div><!--/.navbar-collapse -->
       </div>
     </div>
     </nav>
@@ -320,8 +323,7 @@
             </div>
                 <div class="col-md-8">
 
-                <h4>Comments go here.</h4>
-                        <div class="fb-comments" data-href="http://dashes.com/anil/2013/08/on-location-with-foursquare.html" data-width="800"></div>
+                <div class="fb-comments" data-href="http://dashes.com/anil/2013/08/on-location-with-foursquare.html" data-width="600"></div>
 
             </div>
 
@@ -337,7 +339,7 @@
 
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-md-2">
             <ul class="bloglist">
                 <li><a href="http://www.alaina.org/">Alaina Browne</a></li>
                 <li><a href="http://www.tiara.org/blog/">Alice Marwick</a></li>
@@ -348,7 +350,7 @@
             </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-2">
             <ul class="bloglist">
                 <li><a href="http://www.cnewmark.com/">Craig Newmark</a></li>
                 <li><a href="http://danbricklin.com/log/">Dan Bricklin</a></li>
@@ -360,7 +362,7 @@
             </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-2">
             <ul class="bloglist">
                 <li><a href="http://kottke.org/">Jason Kottke</a></li>
                 <li><a href="http://www.illdoctrine.com/">Jay Smooth</a></li>
@@ -372,7 +374,7 @@
             </ul>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-2">
             <ul class="bloglist">
                 <li><a href="http://nataliepo.typepad.com/">Natalie Podrazik</a></li>
                 <li><a href="http://naveenium.com/">Naveen Selvadurai</a></li>
@@ -633,7 +635,7 @@
     </footer>
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
     <!-- Start Quantcast tag -->
     <script type="text/javascript">
