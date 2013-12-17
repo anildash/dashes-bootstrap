@@ -1,0 +1,150 @@
+<?php ob_start("ob_gzhandler");
+?><!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title><$mt:EntryTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
+
+    <meta property="og:url" content="<mt:IfArchiveType type="individual"><$mt:EntryPermalink$><mt:Else>http://dashes.com/anil/</mt:ifArchiveType>"/>
+    <meta property="og:title" content="<mt:IfArchiveType type="individual"><$mt:EntryTitle><mt:Else>dashes.com</mt:ifArchiveType>"/>
+
+    <mt:EntryPrevious><link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle$>" /></mt:EntryPrevious>
+    <mt:EntryNext><link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle$>" /></mt:EntryNext>
+
+<$mt:Include module="2014 Header Metadata"$>
+
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=210975118919670";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <nav>
+    <div class="navbar navbar-static-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="<$mt:BlogURL$>"><$mt:BlogName encode_html="1"$></a>
+        <div class="collapse navbar-collapse">
+          <h2 class="navbar-text navbar-left"><$mt:BlogDescription$></h2>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+            <form method="get" action="http://dashes.com/mt/mt-search.cgi" class="navbar-form form-inline" role="search">
+                <div class="form-group">
+                    <input type="text" class="ti form-control" style="width: 75%;" placeholder="Search" id="search" name="search" value="">
+                    <button type="submit" class="btn btn-default "><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+                    <input type="hidden" name="IncludeBlogs" value="1">
+                    <input type="hidden" name="limit" value="20">
+            </form>
+            </li>
+            <li><a href="<$mt:BlogURL$>about.html">About</a></li>
+            <li><a href="<$mt:BlogURL$>best-of/">Best Of</a></li>
+            <li><a href="<$mt:BlogURL$>most-popular/">Most Popular</a></li>
+            <li><a href="#footer">More &raquo;</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <article itemscope itemtype="http://schema.org/Article">
+
+                <div class="col-md-4">
+
+                    <h1><$mt:EntryTitle$></h1>
+                    <h2 itemprop="datePublished" content="<$mt:EntryDate format_name="iso8601"$>"><a href="<$mt:EntryPermalink$>" itemprop="url"><i class="glyphicon glyphicon-link text-muted"></i> <$mt:EntryDate format="%x"$></a></h2>
+
+                </div>
+
+                <div class="col-md-8" itemprop="articleBody">
+
+                    <$mt:EntryBody$>
+                    <$mt:EntryMore$>
+
+                </div>
+
+            </article>
+        </div><!-- /.row -->
+
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="share-buttons" style="">
+                    <div class="fb-like" data-href="<$mt:EntryPermalink$>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" style="padding-top: -8px;"></div>
+                    <a data-pin-config="beside" href="//pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" style="" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" alt="Pin It" /></a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<$mt:EntryPermalink$>" data-via="anildash" data-related="anildash">Tweet</a>
+                </div>
+
+            </div>
+                <div class="col-md-8">
+
+                <h4 class="text-muted">Tags: <mt:EntryTags glue=' '><a href="/tag/<$mt:TagName normalize="1"$>" rel="tag" class="label label-default"><$MTTagName$></a></mt:EntryTags></h4>
+                <h4 class="date-header embedbox-header text-muted hidden-xs">Embed:</h4>
+                <textarea class="embedbox form-control text-muted hidden-xs" onclick="this.focus();this.select()" ><script type='text/javascript' src='<$mt:BlogURL$><$mt:EntryDate format="%Y/%m/"$><$mt:EntryBasename separator="-"$>.js'></script></textarea>
+
+            </div>
+
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+                <div class="col-md-8">
+                
+
+                <div class="fb-comments" data-href="<$MTEntryPermalink$>" data-width="600"></div>
+
+            </div>
+
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+                <div class="col-md-8">
+
+                    <ul class="pager">
+                      <mt:EntryPrevious><li class="previous" rel="prev"><a href="<$mt:EntryPermalink$>"><i class="glyphicon glyphicon-arrow-left"></i> <$mt:EntryTitle$></a></li></mt:EntryPrevious>
+                      <mt:EntryNext><li class="next" rel="next"><a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$> <i class="glyphicon glyphicon-arrow-right"></i></a></li></mt:EntryNext>
+                    </ul>
+
+            </div>
+
+        </div><!-- /.row -->
+
+
+    </div><!-- /.container -->
+
+    <footer>
+        <div id="footer">
+          <div class="container well">
+
+<$mt:Include module="2014 Blogroll"$>
+
+<$mt:Include module="2014 Archives Table"$>
+
+
+          </div>
+        </div>
+    </footer>
+
+<$mt:Include module="2014 Footer Scripts"$>
+
+  </body>
+</html>
